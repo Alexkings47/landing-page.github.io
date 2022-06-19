@@ -100,6 +100,11 @@ h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: hsl(322, 100%, 66%);
+  transform: scale(1.1);
 }
 .nav-btn {
   background-color: white;
@@ -151,9 +156,13 @@ footer {
 .footer-logo {
   grid-column: 1/-1;
   width: 10rem;
-  background-color: white;
+  fill: hsl(213, 77%, 88%);
+  /* background-color: white; */
   padding: 1rem;
+  filter:invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+
 }
+
 .footer-items,
 .footer-icons {
   text-transform: capitalize;
@@ -181,9 +190,11 @@ footer {
   border-radius: 50%;
   padding: 5px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .footer-icons > *:hover {
   color: hsl(322, 100%, 66%);
+  transform: scale(1.1);
 }
 .copyright {
   grid-column: -2/-1;
@@ -209,6 +220,13 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    background: linear-gradient(
+        hsla(193, 100%, 96%, 0.6),
+        hsla(193, 100%, 96%, 0.6)
+      ),
+      url(./images/bg-hero-mobile.svg);
+  }
   .bottom-header {
     flex-direction: column;
     justify-content: space-between;
